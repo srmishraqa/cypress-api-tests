@@ -1,0 +1,7 @@
+{
+  "token": "ccffe0ffc4a33f1492b81a8abf2a39ce513da4d09b2b213b3cdab8f9bc9b749a",
+  "baseURL": "https://gorest.co.in/public/v2/",
+  "path": {
+    "getAllUsers": "users"
+  }
+}
