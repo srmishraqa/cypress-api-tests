@@ -20,12 +20,12 @@ describe('GET API User Tests', () => {
     cy.log(data.baseURL)
     cy.request({
       method: 'GET',
-      url: data.baseURL + data.path.getAllUsers,
+      url: `${data.baseURL}${data.path.getAllUsers}`,
       headers: {
-        authorization: 'Bearer ' + data.token,
+        authorization: `Bearer ${data.token}`,
       },
     }).then((res) => {
-      cy.log('RES-> STATUS : ', res.status)
+      cy.log('RES -> STATUS : ', res.status)
       expect(res.status).to.be.eq(200)
       for (var i = 0; i < res.body.length; i++) {
         dataArray.push(res.body[i].id)
@@ -38,12 +38,12 @@ describe('GET API User Tests', () => {
     for (var i = 0; i < dataArray.length; i++) {
       cy.request({
         method: 'GET',
-        url: data.baseURL + data.path.getAllUsers + '/' + dataArray[i],
+        url: `${data.baseURL}${data.path.getAllUsers}/${dataArray[i]}`,
         headers: {
-          authorization: 'Bearer ' + data.token,
+          authorization: `Bearer ${data.token}`,
         },
       }).then((res) => {
-        cy.log('RES-> STATUS : ', res.status)
+        cy.log('RES -> STATUS : ', res.status)
         expect(res.status).to.be.eq(200)
         cy.log('NAME', res.body.name)
       })
@@ -54,9 +54,9 @@ describe('GET API User Tests', () => {
     cy.fixture('getSingleUsersSchema.json').then((jsonSchema) => {
       cy.request({
         method: 'GET',
-        url: data.baseURL + data.path.getAllUsers + '/' + dataArray[0],
+        url: `${data.baseURL}${data.path.getAllUsers}/${dataArray[0]}`,
         headers: {
-          authorization: 'Bearer ' + data.token,
+          authorization: `Bearer ${data.token}`,
         },
       }).then((res) => {
         const validate = ajv.compile(jsonSchema)
