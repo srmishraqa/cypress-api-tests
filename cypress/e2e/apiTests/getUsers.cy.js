@@ -1,9 +1,12 @@
+/// <reference types="Cypress" />
+
 let dataArray = []
 import Ajv from 'ajv'
 const ajv = new Ajv({ allErrors: true, verbose: true }) // options are passed whether all errors are true or not
 
 describe('GET API User Tests', () => {
   let data
+
   before(
     'load settings.josn data from fixtures folder data so that it can be used throughout',
     () => {
@@ -51,7 +54,7 @@ describe('GET API User Tests', () => {
   })
 
   it('Schema Validation for GET User by specific ID call', () => {
-    cy.fixture('getSingleUsersSchema.json').then((jsonSchema) => {
+    cy.fixture('jsonSchema/getSingleUsersSchema.json').then((jsonSchema) => {
       cy.request({
         method: 'GET',
         url: `${data.baseURL}${data.path.getAllUsers}/${dataArray[0]}`,

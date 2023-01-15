@@ -1,0 +1,8 @@
+{
+  "craeteUser": {
+    "name": "Soumya Test",
+    "gender": "Female",
+    "status": "active",
+    "email": "soumya_test@example.com"
+  }
+}
