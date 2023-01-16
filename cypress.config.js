@@ -12,5 +12,9 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here'
     },
+    specPattern: [
+      'cypress/e2e/apiTests/getUsers.spec.cy.js',
+      'cypress/e2e/apiTests/postUsers.spec.cy.js',
+    ],
   },
 })
