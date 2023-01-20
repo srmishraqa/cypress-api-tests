@@ -17,7 +17,8 @@ module.exports = defineConfig({
     specPattern: [
       'cypress/e2e/apiTests/getUsers.spec.cy.js',
       'cypress/e2e/apiTests/postUsers.spec.cy.js',
-      'cypress/e2e/apiTests/postUserUsingFaker.cy.js',
+      'cypress/e2e/apiTests/postUserUsingFaker.spec.cy.js',
+      'cypress/e2e/apiTests/getSpaceXCapsules.spec.cy.js',
     ],
   },
 })

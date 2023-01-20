@@ -3,5 +3,11 @@
   "baseURL": "https://gorest.co.in/public/v2/",
   "path": {
     "getAllUsers": "users"
+  },
+  "spaceX": {
+    "sapceXBaseUrl": "https://api.spacexdata.com/v3/",
+    "path": {
+      "capsules": "capsules"
+    }
   }
 }
