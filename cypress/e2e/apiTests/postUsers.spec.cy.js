@@ -1,4 +1,3 @@
-/// <reference types="Cypress" />
 import jsonBody from '../../fixtures/jsonBody/user.json'
 
 describe('Create User Test cases', () => {
@@ -62,5 +61,8 @@ describe('Create User Test cases', () => {
             expect(res.body.name).to.be.eq(jsonBody.craeteUser.name)
           })
       })
+  })
+  it('test logging', () => { 
+    cy.log("testing")
   })
 })

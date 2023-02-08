@@ -3,5 +3,6 @@
   "baseURL": "https://gorest.co.in/public/v2/",
   "path": {
     "getAllUsers": "users"
-  }
+  },
+  "emailSuffix":"@example.com"
 }

@@ -1,4 +1,3 @@
-/// <reference types="Cypress" />
 import jsonBody from '../../fixtures/jsonBody/user.json'
 //imported faker to randomize data
 import { faker } from '@faker-js/faker'
@@ -15,14 +14,14 @@ describe('POST USER using Faker', () => {
         cy.log(JSON.stringify(jsonBody.craeteUser))
         // data got randomized using faker.js library
         jsonBody.craeteUser.name = faker.name.firstName()
-        jsonBody.craeteUser.email = `${jsonBody.craeteUser.name}@example.com`
+        jsonBody.craeteUser.email = `${jsonBody.craeteUser.name}${data.emailSuffix}`
         cy.log(JSON.stringify(jsonBody.craeteUser))
       })
     }
   )
 
   it('POST a single User using Faker.js', () => {
-    //cy.log(JSON.stringify(jsonBody.craeteUser))
+    // cy.log(JSON.stringify(jsonBody.craeteUser))
     cy.request({
       method: 'POST',
       url: `${data.baseURL}${data.path.getAllUsers}`,

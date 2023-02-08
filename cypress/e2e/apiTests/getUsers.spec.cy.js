@@ -1,4 +1,3 @@
-/// <reference types="Cypress" />
 
 let dataArray = []
 import Ajv from 'ajv'
@@ -28,6 +27,7 @@ describe('GET API User Tests', () => {
         authorization: `Bearer ${data.token}`,
       },
     }).then((res) => {
+      //cy.debug();
       cy.log('RES -> STATUS : ', res.status)
       expect(res.status).to.be.eq(200)
       for (var i = 0; i < res.body.length; i++) {
